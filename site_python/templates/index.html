@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processador de Imagens</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Envie uma Imagem para Processamento</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        
+        <!-- seleciona o filtro -->
+        <label for="filter">Escolha um filtro:</label>
+        <select name="filter" id="filter" required>
+            <option value="gray">Escala de Cinza</option>
+            <option value="blur">Desfoque</option>
+            <option value="threshold">Limite</option>
+            <option value="erode">Erosão</option>
+            <option value="dilate">Dilatação</option>
+        </select>
+        
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

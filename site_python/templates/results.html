@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+</head>
+<body>
+    <h1>Imagem Processada</h1>
+    
+    <p>Original:</p>
+    <!-- Exibe a imagem original -->
+    <img src="{{ url_for('static', filename='uploads/' + original) }}" width="300">
+    
+    <p>Processada (Escala de Cinza):</p>
+    <!-- Exibe a imagem processada -->
+    <img src="{{ url_for('static', filename='processed/' + processed) }}" width="300">
+    
+    <br><br>
+    <a href="/">Voltar</a>
+</body>
+</html>
